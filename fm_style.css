@@ -1,0 +1,111 @@
+/* Основной стиль страницы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f0f0f0; /* Светло-серый фон */
+}
+
+h1 {
+    color: #333; /* Темно-серый заголовок */
+}
+
+/* Стили для контейнера форм */
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Стили для колонок форм */
+.form-column {
+    background: #ffffff; /* Белый фон для форм */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+/* Стили для кнопок и полей ввода */
+input[type="file"],
+input[type="text"],
+input[type="submit"] {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Светло-серая рамка */
+    border-radius: 3px; /* Скругленные углы */
+}
+
+input[type="submit"] {
+    background-color: #6b8e23; /* Оливковый фон */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 3px; /* Скругленные углы */
+}
+
+input[type="submit"]:hover {
+    background-color: #4a5d23; /* Темный оливковый при наведении */
+}
+
+/* Стили для ссылки перехода в корневой каталог */
+.back-button {
+    margin-bottom: 20px;
+}
+
+.back-button form {
+    display: inline;
+}
+
+.back-button input[type="submit"] {
+    background-color: #6b8e23; /* Оливковый фон */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px; /* Скругленные углы */
+    font-size: 1em; /* Размер шрифта */
+}
+
+.back-button input[type="submit"]:hover {
+    background-color: #4a5d23; /* Темный оливковый при наведении */
+}
+
+/* Стили для ссылок и списка файлов */
+a {
+    color: #007bff; /* Синий цвет ссылок */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Стили для списка файлов и папок */
+ul {
+    list-style: none;
+    padding: 0;
+    background: #ffffff; /* Белый фон для списка */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd; /* Светло-серая линия разделения */
+}
+
+li:last-child {
+    border-bottom: none; /* Убрать нижнюю границу у последнего элемента */
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
