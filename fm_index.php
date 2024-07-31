@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>File Manager</title>
-    <link rel="stylesheet" href="fm_style.css">
-</head>
-<body>
-    <h1>File Manager</h1>
-
-    <?php
+<?php
+	ob_start();
     // Корневая папка для файлов
     $rootDir = './uploads/';
     $currentDir = isset($_GET['dir']) ? trim($_GET['dir'], '/') : '';
@@ -114,6 +105,7 @@
         $filePath = './uploads/' . trim($file, '/');
 
         if (file_exists($filePath)) {
+			ob_end_clean();
             header('Content-Description: File Transfer');
             header('Content-Type: application/octet-stream');
             header('Content-Disposition: attachment; filename="'.basename($filePath).'"');
@@ -155,7 +147,7 @@
         }
 
         $zip->close();
-
+		ob_end_clean();
         header('Content-Type: application/zip');
         header('Content-Disposition: attachment; filename="' . $zipName . '"');
         header('Content-Length: ' . filesize($zipName));
@@ -184,7 +176,15 @@
         downloadFile($_GET['file']);
     }
     ?>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Manager</title>
+    <link rel="stylesheet" href="fm_style.css">
+</head>
+<body>
+    <h1>File Manager</h1>
     <!-- Button to Back to root -->
     <div class="back-button">
 		<input type="submit" value="Back to root" name="submit" onclick="location.href='?dir='">
