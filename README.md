@@ -4,12 +4,11 @@
 
 ## Description
 
-The most simple and easy file manager for php.
+The most simple and easy file manager write on php.
 The first test release with the following functionality:
-uploading files
-creating folders
-Recursive deletion of folders.
-the ability to download several files at the same time.
-the ability to download several files simultaneously in a zip archive.
-
-## Getting Started
+- uploading files
+- creating folders
+- Recursive deletion of folders.
+- the ability to download several files at the same time.
+- the ability to download several files simultaneously in a zip archive.
+- logging of user actions
